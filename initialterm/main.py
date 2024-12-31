@@ -40,7 +40,7 @@ def ollama_api_call(os_name, command, model_name):
     stream = ollama.chat(
         model=model_name,
         options={'temperature': 0.1},
-        messages=[{'role': 'user', 'content': f'I am using {os_name} operating system which does not have any extentions instaalled and I want to Convert the user query: {command} to commandline / terminal code. Only output one line of terminal command please. Do not add any other text as the intention is to copy paste this generated output directly in terminal and run.'}],
+        messages=[{'role': 'user', 'content': f'I am using {os_name} operating system which does not have any extentions installed and I want to Convert the user query: {command} to commandline / terminal code. Only output one line of terminal command please. Do not add any other text as the intention is to copy paste this generated output directly in terminal and run.'}],
         stream=True,
     )
     logging.debug("Ollama API call completed")
